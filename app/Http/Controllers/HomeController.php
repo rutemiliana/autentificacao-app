@@ -12,7 +12,8 @@ class HomeController extends Controller
      * @return void
      */
     public function __construct()
-    {
+    {   
+        //este middleware está defido no arquivo Kernel.php na parsta App/Http
         $this->middleware('auth');
     }
 

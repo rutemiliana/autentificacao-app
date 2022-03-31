@@ -54,6 +54,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            //o confirmed sempre vai comparar o valor do campo testedo, neste caso "password", em relação ao valor de um outro campo de mesmo nome, porém terminado em "_confirmation", neste paso, "password_confirmation". 
+            //Existindo os dois campos, então os valores dos campos(parâmetros) serão comparados
         ]);
     }
 

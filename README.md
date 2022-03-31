@@ -15,7 +15,12 @@
 5. php artisan ui bootstrap --auth
 6. npm install
 7. npm run dev
-8. 
+8. Update views auth/password/login and auth/password/register
+9. Write anotations in RegisterController
+10. php artisan make:controller --resource TarefaController --model=Tarefa
+11. yes
+12. configurate mail in file .env for reset password
+13. config email
 
 
 
