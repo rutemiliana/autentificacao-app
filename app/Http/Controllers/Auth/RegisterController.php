@@ -22,6 +22,7 @@ class RegisterController extends Controller
     |
     */
 
+    // vendor\laravel\ui\auth-backend\RegistersUsers.php
     use RegistersUsers;
 
     /**
