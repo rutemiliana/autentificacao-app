@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# About project
+1. Create new project
+2. Install nodejs
+3. Install Laravel UI, run composer require laravel/ui
+4. php artisan serve
+5. php artisan ui bootstrap --auth
+6. npm install
+7. npm run dev
+8. 
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
