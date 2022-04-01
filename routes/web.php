@@ -34,5 +34,10 @@ Route::resource('tarefa', TarefaController::class);
 //ver TarefaController o método  __construct()
 
 Route::get('mensagem-teste' , function (){
-    return new MensagemTesteMail();
+    //return new MensagemTesteMail();
+
+    // o comando abaixo pode ser testado pelo tinker usando:
+    // use App\Mail\MensagemTesteMail;
+    Mail::to('email')->send(new MensagemTesteMail());
+    return 'E-mail enviado com sucesso!';
 });
