@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TarefaController;
+use App\Mail\MensagemTesteMail;
+
 
 
 /*
@@ -30,3 +32,7 @@ Auth::routes();
 Route::resource('tarefa', TarefaController::class);
 //Route::resource('tarefa', TarefaController::class)->middleware('auth');
 //ver TarefaController o método  __construct()
+
+Route::get('mensagem-teste' , function (){
+    return new MensagemTesteMail();
+});

@@ -24,7 +24,7 @@ class TarefaController extends Controller
     {
 
         $id = auth()->user()->id;
-        $name = auth()->user()->id;
+        $name = auth()->user()->name;
         $email = auth()->user()->email;
 
         return "ID: $id | Nome: $name | Email: $email";

@@ -21,6 +21,7 @@
 11. yes
 12. configurate mail in file .env for reset password
 13. config email
+14. php artisan make:mail MensagemTesteMail --markdown
 
 
 
