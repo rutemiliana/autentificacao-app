@@ -7,6 +7,10 @@ Corpo da mensagem.
 Texto do botão
 @endcomponent
 
+@component('mail::button', ['url' => ''])
+Texto do botão
+@endcomponent
+
 Obrigado,<br>
 {{ config('app.name') }}
 @endcomponent

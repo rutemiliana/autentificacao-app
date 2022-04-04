@@ -27,6 +27,8 @@ class TarefaController extends Controller
         $name = auth()->user()->name;
         $email = auth()->user()->email;
 
+        return view('teste');
+
         return "ID: $id | Nome: $name | Email: $email";
         
         //verifica se o usuário está ou não autenticado. Importando Auth de  use Illuminate\Support\Facades\Auth;
