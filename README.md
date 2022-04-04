@@ -25,6 +25,7 @@
 15. Create model mail
 16. php artisan vendor:publish (Copied Directory [\vendor\laravel\framework\src\Illuminate\Mail\resources\views] To [\resources\views\vendor\mail])
 17. create folder img in public folder
+18. teste branch
 
 
 
