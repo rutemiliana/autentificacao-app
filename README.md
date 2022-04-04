@@ -9,13 +9,13 @@
 
 # About project
 1. Create new project
-2. Install nodejs
+2. Install nodejs (v16.14.2)
 3. Install Laravel UI, run composer require laravel/ui
 4. php artisan serve
 5. php artisan ui bootstrap --auth
 6. npm install
 7. npm run dev
-8. Update views auth/password/login and auth/password/register
+8. Update views auth/passwords/login and auth/password/register
 9. Write anotations in RegisterController
 10. php artisan make:controller --resource TarefaController --model=Tarefa
 11. yes
@@ -25,7 +25,7 @@
 15. Create model mail
 16. php artisan vendor:publish (Copied Directory [\vendor\laravel\framework\src\Illuminate\Mail\resources\views] To [\resources\views\vendor\mail])
 17. create folder img in public folder
-18. teste branch
+
 
 
 
