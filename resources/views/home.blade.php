@@ -11,10 +11,17 @@
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
+                            <h1>mensagems</h1>
                         </div>
                     @endif
-
                     {{ __('You are logged in!') }}
+
+                    @if($user->type_user == 2)
+                        <h1>Você é admin</h1>
+                    @endif
+
+                    {{ $user -> name }}
+                   
                 </div>
             </div>
         </div>
