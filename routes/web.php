@@ -38,7 +38,9 @@ Route::get('mensagem-teste' , function (){
 
     // o comando abaixo pode ser testado pelo tinker usando:
     // use App\Mail\MensagemTesteMail;
-    //Mail::to('email')->send(new MensagemTesteMail());
+    //Mail::to('rutemiliana13@gmail.com')->send(new MensagemTesteMail());
+    // retorna null se não tiver nenhum erro
+    
     //return 'E-mail enviado com sucesso!';
 
     //testando branch
