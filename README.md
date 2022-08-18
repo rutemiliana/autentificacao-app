@@ -27,6 +27,7 @@
     (Copied Directory [\vendor\laravel\framework\src\Illuminate\Mail\resources\views] To [\resources\views\vendor\mail])
 17. select option laravel-mail    
 18. create folder img in public folder
+19. php artisan make:notification RedefinirSenhaNotification
 
 
 

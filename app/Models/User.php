@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Notifications\RedefinirSenhaNotification;
 
 class User extends Authenticatable
 {
@@ -42,7 +43,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    //public function sendPasswordResetNotification($token){
-      //  dd('Chegamos até aqui');
-    //}
+    //Metodo para interceptação e desvio do padrão de reset de senha, sem alterar o metodo raiz. Ajuda na personalização das mensagens. Evita que nas atualizações do pacote as alterações feitas se percam;
+
+    public function sendPasswordResetNotification($token){
+      $this->notify(new RedefinirSenhaNotification($token));
+    } 
 }
