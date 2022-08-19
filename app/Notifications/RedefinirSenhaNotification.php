@@ -21,10 +21,10 @@ class RedefinirSenhaNotification extends Notification
 
      
      //metodo construtor
-    public function __construct()
+    public function __construct($token)
     {
         //recuperando atributo e o adiciona como parÂmetro
-        $this->$token = $token;
+        $this->token = $token;
 
     }
 
@@ -47,10 +47,15 @@ class RedefinirSenhaNotification extends Notification
      */
     public function toMail($notifiable)
     {
+        $url = 'http://localhost:8000/reset/password/'.$this->token;
+        $minutos = config('auth.passwords.'.config('auth.defaults.passwords').'.expire');
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                ->subject('Atualização de senha')
+                ->line('Esqueceu sua senha? Então resetaremos ela!')
+                ->action('Clique aqui para resetar sua senha', $url)
+                ->line('O link expira em '. $minutos. ' minutos.')
+                ->line('Se você não solicitou a alteração de senha, então não é necessário realizar nenhuma ação');
+        // linhas do return adaptadas do arquivo app\vendor\laravel\framework\src\Illuminate\Auth\Notifications\ResetPassword.php
     }
 
     /**
