@@ -47,7 +47,7 @@ class RedefinirSenhaNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        $url = 'http://localhost:8000/reset/password/'.$this->token;
+        $url = 'http://localhost:8000/password/reset/'.$this->token;
         $minutos = config('auth.passwords.'.config('auth.defaults.passwords').'.expire');
         return (new MailMessage)
                 ->subject('Atualização de senha')
