@@ -46,6 +46,7 @@ class User extends Authenticatable
     //Metodo para interceptação e desvio do padrão de reset de senha, sem alterar o metodo raiz. Ajuda na personalização das mensagens. Evita que nas atualizações do pacote as alterações feitas se percam;
 
     public function sendPasswordResetNotification($token){
-      $this->notify(new RedefinirSenhaNotification($token));
+        //recupera o token de segurança e o email do usuario
+        $this->notify(new RedefinirSenhaNotification($token, $this->email, $this->name));
     } 
 }
