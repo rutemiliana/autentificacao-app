@@ -27,12 +27,12 @@ Ao confirmar o email, a coluna email_verified_at da tabela Users é atualizada
 */
 Auth::routes(['verify' => true]);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('verified');
 
 Auth::routes();
 
 //'tarefa' nome do grupo rotas
-Route::resource('tarefa', TarefaController::class);
+Route::resource('tarefa', TarefaController::class)->middleware('verified');
 //Route::resource('tarefa', TarefaController::class)->middleware('auth');
 //ver TarefaController o método  __construct()
 
