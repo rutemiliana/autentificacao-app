@@ -27,4 +27,14 @@ class ResetPasswordController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+
+    //sobrescreve o metodo rules de app\vendor\laravel\ui\auth-backend\ResetsPasswords.php
+    protected function rules()
+    {
+        return [
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => ['required', 'confirmed', 'min:4'],
+        ];
+    }
 }
