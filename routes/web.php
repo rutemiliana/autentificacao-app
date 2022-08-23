@@ -22,7 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+/*habilita a verificação de email ao criar a conta para evitar cadastro de emails indevidos ou de terceiros
+Ao confirmar o email, a coluna email_verified_at da tabela Users é atualizada
+*/
+Auth::routes(['verify' => true]);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
